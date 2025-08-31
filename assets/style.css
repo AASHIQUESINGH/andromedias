@@ -45,6 +45,7 @@ nav {
   line-height: 100%;
   font-weight: 400;
   color: #fff;
+  position: relative;
 }
 
 .nav_list li a {
@@ -58,8 +59,8 @@ nav {
 }
 
 .nav-btn button {
-  /* width: 150px; */
-  padding: 10px 38px;
+  width: 150px;
+  /* padding: 10px 38px; */
   height: 50px;
   border-radius: 52px;
   /* padding: 10px; */
@@ -70,9 +71,131 @@ nav {
   );
   border: none;
   color: #fff;
+  transition: background 2s ease-in-out;
+}
+
+/* hide dropdown by default */
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  list-style: none;
+  padding: 0px 0;
+  margin: 0;
+  opacity: 0;
+  display: none;
+  transform: translateY(10px); /* slide effect */
+  transition: all 0.3s ease;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  min-width: 160px;
+  z-index: 10;
+  visibility: hidden;
+  transform: translateY(10px); /* little slide effect */
+  transition: all 0.5s ease-in-out;
+}
+
+.dropdown li {
+  padding: 0px 0px;
+}
+
+.dropdown li a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+  position: relative;
+}
+
+.dropdown li a > img {
+  height: 100%;
+  width: 120%;
+  position: absolute;
+  top: -8px;
+  left: 53%;
+  transform: translateX(-50%);
+  text-align: center;
+  object-fit: cover;
+}
+
+.dropdown li p {
+  text-align: center;
+  margin-bottom: 0;
+  padding-top: 10px;
+}
+
+/* on hover show */
+.nav_list li:hover > .dropdown {
+  padding: 10px 0;
+  height: 192px;
+  width: 350px;
+  pointer-events: auto;
+  position: absolute;
+  top: 100%;
+  left: -82px;
+  display: flex;
+  border-radius: 8px;
+  justify-content: space-evenly;
+  background: linear-gradient(
+    to top,
+    rgb(0, 127, 139, 0.4),
+    rgba(0, 127, 139, 0.1)
+  );
+  margin-top: 30px;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.nav_list li:hover::after {
+  content: "";
+  position: absolute;
+  top: 100%; /* li ke niche */
+  left: 0;
+  width: 100%;
+  height: 150px; /* gap jitna chahiye */
+}
+
+.dropdown::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 1px solid rgba(21, 121, 136, 1);
+  border-radius: 16px;
+  /* opacity: 0.5; */
+  mask-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 1) 20%,
+    transparent 80%
+  );
+  pointer-events: none;
+}
+
+.dropdown_ellipse {
+  height: 120px;
+  width: 120px;
+  margin-top: 25px;
+}
+
+.dropdown_ellipse img {
+  height: 100%;
+  width: 120%;
+  object-fit: cover;
+}
+
+.dropdown_line img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 /* banner section */
+
+.hero_section {
+  position: relative;
+}
 
 .hero_section video {
   height: 100vh;
@@ -93,6 +216,7 @@ nav {
   align-items: center;
   justify-content: center;
   gap: 20px;
+  z-index: 1;
 }
 
 .hero_inner_head span {
@@ -108,13 +232,8 @@ nav {
 
 .hero_inner_head {
   backdrop-filter: blur(4.150000095367432px);
-  background: linear-gradient(
-    90deg,
-    rgba(15, 32, 100, 0.3) 0%,
-    rgba(21, 118, 135, 0.3) 100%
-  );
   border-radius: 40px;
-  padding: 8px 8px;
+  padding: 6px 10px 6px 6px;
   border: 1px solid rgba(21, 121, 136, 1);
   background: linear-gradient(
     90deg,
@@ -122,11 +241,11 @@ nav {
     rgba(21, 118, 135, 0.3) 100%
   );
   border: 1px solid rgba(21, 121, 136);
-  mask-image: linear-gradient(
+  /* mask-image: linear-gradient(
     to left,
     rgba(255, 255, 255, 1) 0%,
     transparent 200%
-  );
+  ); */
   color: #fff;
 }
 
@@ -147,6 +266,18 @@ nav {
 
 .hero-width {
   width: 72%;
+}
+
+.vedio_shadow {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+}
+
+.vedio_shadow img {
+  height: 100%;
+  width: 100%;
 }
 
 /* second section  */
@@ -207,10 +338,16 @@ nav {
 }
 
 .bg_button {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .bg_button button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 38px;
   color: #fff;
   font-size: 16px;
@@ -231,6 +368,68 @@ nav {
     rgba(255, 255, 255, 1) 0%,
     transparent 200%
   );
+  transition: background 0.3s ease-in-out; /* smooth transition */
+}
+
+.nav-btn a {
+  text-decoration: none;
+}
+
+/* .nav-btn button i {
+  display: none;
+} */
+
+.nav-btn button:hover {
+  /* content: ""; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  position: relative;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 127, 139, 0.3),
+    rgba(0, 127, 139, 0.3)
+  );
+}
+
+/* .nav-btn button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  overflow: hidden;  
+} */
+
+.nav-btn button i {
+  opacity: 0;
+  transform: translateX(-10px); /* start slightly left */
+  max-width: 0; /* collapse width */
+  transition: all 0.3s ease-in-out;
+  font-size: 14px;
+}
+
+.nav-btn button:hover i {
+  opacity: 1;
+  transform: translateX(0);
+  max-width: 20px; /* enough for the icon’s size */
+}
+
+.nav-btn button:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid rgba(21, 121, 136, 1);
+  border-radius: 32px;
+  /* opacity: 0.5; */
+  mask-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 1) 20%,
+    transparent 80%
+  );
+  pointer-events: none;
 }
 
 .head_wrapper {
@@ -355,7 +554,7 @@ nav {
   flex: 1;
   position: relative;
 }
-.offer_img img{
+.offer_img img {
   height: 100%;
   width: 100%;
   object-fit: cover;
@@ -415,6 +614,16 @@ nav {
   pointer-events: none;
 }
 
+.section_card::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0px;
+  width: 101%;
+  height: 120%;
+  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.8));
+}
+
 .section_card h2 {
   color: #fff;
   font-size: 40px;
@@ -422,12 +631,21 @@ nav {
   text-align: center;
   margin-bottom: 0;
   padding-bottom: 14px;
+  position: relative;
+  z-index: 1;
 }
 
 .section_card p {
   color: #fff;
   margin-bottom: 0;
   padding-bottom: 40px;
+  position: relative;
+  z-index: 1;
+}
+
+.section_card a {
+  position: relative;
+  z-index: 1;
 }
 
 .comming_soon img {
@@ -560,6 +778,10 @@ nav {
 }
 
 /* testinomail section  */
+
+.testinomialSwiper {
+  padding: 0 10px !important;
+}
 
 .testinomial_container {
   padding-bottom: 100px;
@@ -840,7 +1062,17 @@ nav {
   position: relative;
 }
 
-.footer_wrapper::before {
+footer {
+  padding-top: 7px;
+  height: 4px;
+  width: 100%;
+  background: url("./images/footer_top_line.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+/* .footer_wrapper::before {
   content: "";
   position: absolute;
   top: 0;
@@ -848,14 +1080,9 @@ nav {
   width: 100%;
   height: 100%;
   border-top: 1px solid rgba(21, 121, 136, 1);
-  /* opacity: 0.5; */
-  mask-image: linear-gradient(
-    to top,
-    rgba(255, 255, 255, 1) 20%,
-    rgba(255, 255, 255, 1) 80%
-  );
+  
   pointer-events: none;
-}
+} */
 
 .footer_logo img {
   padding-bottom: 11px;
@@ -981,8 +1208,8 @@ nav {
 
 .about_img img {
   height: 100%;
-    width: 100%;
-    object-fit: cover;
+  width: 100%;
+  object-fit: cover;
 }
 
 /* UUR TEAM  */
@@ -1149,11 +1376,11 @@ nav {
   display: flex;
   gap: 50px;
   align-items: center;
-  padding: 10px 30px;
+  padding: 0px 15px;
 }
 
 .commings_details {
-  padding: 40px 0 30px;
+  padding: 30px 0 30px;
 }
 
 .commings_details h2 {
@@ -1527,7 +1754,9 @@ nav {
 }
 
 .blog_details .bg_button {
-  text-align: left;
+  display: flex;
+  justify-content: left;
+  align-items: center;
   padding-bottom: 20px;
 }
 
@@ -1588,7 +1817,7 @@ nav {
   padding-bottom: 100px;
 }
 
-.blog_inner_img img{
+.blog_inner_img img {
   width: 100%;
   height: 100%;
 }

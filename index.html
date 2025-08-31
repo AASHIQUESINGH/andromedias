@@ -11,7 +11,7 @@
     <!-- Add this in <head> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 </head>
 
@@ -25,8 +25,50 @@
             <div>
                 <ul class="nav_list">
                     <li><a href="about.html">About us</a></li>
-                    <li><a href="product.html">Products <i class="fa fa-angle-down" aria-hidden="true"></i></a></li>
+                    <li><a href="product.html">Products <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                        <ul class="dropdown">
+                            <li><a href="#">
+                                    <div class="dropdown_ellipse">
+                                        <img src="./assets/images/Ellipse.png" alt="">
+                                    </div>
+                                    <img src="./assets/images/uur_image.png" alt="">
+                                </a>
+                                <p style="color: #fff;">UUR</p>
+                            </li>
+                            <li class="dropdown_line">
+                                <img src="./assets/images/dropdown_line.png" alt="">
+                            </li>
+                            <li>
+                                <a href="">
+                                    <div class="dropdown_ellipse">
+                                        <img src="./assets/images/Ellipse.png" alt="">
+                                    </div>
+                                    <img src="./assets/images/Aquasee.png" alt="">
+
+                                </a>
+                                <p> AquaSee</p>
+                            </li>
+                        </ul>
+                    </li>
                     <li><a href="innovation.html">Innovation <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                        <ul class="dropdown">
+                            <li><a href="#">
+                                    <div class="dropdown_ellipse">
+                                        <img src="./assets/images/Ellipse.png" alt="">
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="dropdown_line">
+                                <img src="./assets/images/dropdown_line.png" alt="">
+                            </li>
+                            <li>
+                                <a href="">
+                                    <div class="dropdown_ellipse">
+                                        <img src="./assets/images/Ellipse.png" alt="">
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
                     </li>
                     <li><a href="blog.html">Blog</a></li>
                 </ul>
@@ -34,7 +76,7 @@
             <div class="nav-btn">
                 <a href="contact.html">
                     <button>
-                        Let's Talk
+                        Let's Talk <i class="fa-solid fa-arrow-right"></i>
                     </button>
                 </a>
             </div>
@@ -61,6 +103,9 @@
                         Empowering Ocean Innovation, Dive into Cutting-Edge Underwater Robotics
                     </p>
                 </div>
+                <div class="vedio_shadow">
+                    <img src="./assets/images/bg_backshadow.png" alt="shadow">
+                </div>
             </div>
         </div>
 
@@ -70,12 +115,12 @@
 
 
 
-    <section class="section-p">
+    <section class="section-p"  data-aos="fade-up" data-aos-duration="1000" >
         <div class="container">
             <div class="leader_head">
                 <h5>Trusted By Leaders In The Industry</h5>
             </div>
-            <div class="second_wrapper">
+            <div class="second_wrapper" >
                 <div class="swiper mySwiper">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
@@ -162,13 +207,13 @@
                             is redefining underwater research and attracting visionary investors. Join us o...
                         </p>
 
-                        <a href="#" class="btns">
-                            <div class="nav-btn">
+                        <div class="nav-btn">
+                            <a href="contact.html">
                                 <button>
-                                    Know more
+                                    Know more <i class="fa-solid fa-arrow-right"></i>
                                 </button>
-                            </div>
-                        </a>
+                            </a>
+                        </div>
                     </div>
 
                 </div>
@@ -180,7 +225,7 @@
 
     <section class="who_we_are">
         <div class="container">
-            <div class="head_wrapper">
+            <div class="head_wrapper"  data-aos="fade-up" data-aos-duration="2000" >
                 <div class="bg_button">
                     <button>Our Products</button>
                 </div>
@@ -195,7 +240,7 @@
 
             <div class="offer_card">
                 <div class="offer_img">
-                    <div class="circle_img img_top">
+                    <div class="circle_img  ">
                         <img src="./assets/images/circle_img.png" alt="">
                     </div>
                     <img src="./assets/images/offer1.png" alt="">
@@ -205,17 +250,17 @@
                             state-of-art tool that empowers marine researchers with unparalleled precision and
                             efficiency in underwater exploration.</p>
 
-                        <a href="#" class="btns">
-                            <div class="nav-btn">
+                        <div class="nav-btn">
+                            <a href="contact.html">
                                 <button>
-                                    Explore
+                                    Explore <i class="fa-solid fa-arrow-right"></i>
                                 </button>
-                            </div>
-                        </a>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="offer_img">
-                    <div class="circle_img img_top">
+                    <div class="circle_img  ">
                         <img src="./assets/images/circle_img.png" alt="">
                     </div>
                     <img src="./assets/images/offer2.png" alt="">
@@ -225,13 +270,13 @@
                             underwater robotics. From ensuring pristine pools to advancing marine exploration, our
                             robots are here to redefine standards and innovate everyday.</p>
 
-                        <a href="#" class="btns">
-                            <div class="nav-btn">
+                        <div class="nav-btn">
+                            <a href="contact.html">
                                 <button>
-                                    Explore
+                                    Explore <i class="fa-solid fa-arrow-right"></i>
                                 </button>
-                            </div>
-                        </a>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -248,13 +293,13 @@
                 <p>
                     Book a call today and start building your robot.
                 </p>
-                <a href="#" class="btns">
-                    <div class="nav-btn">
+                <div class="nav-btn">
+                    <a href="contact.html">
                         <button>
-                            Let’s Talk
+                            Let's Talk <i class="fa-solid fa-arrow-right"></i>
                         </button>
-                    </div>
-                </a>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -262,7 +307,7 @@
 
     <section class="who_we_are">
         <div class="container">
-            <div class="head_wrapper">
+            <div class="head_wrapper" data-aos="fade-up" data-aos-duration="2000" >
                 <div class="bg_button">
                     <button>Our Solutions</button>
                 </div>
@@ -380,46 +425,46 @@
                 </div>
             </div>
             <div class="advanced_f">
-                <div class="advanced_wrapper">
+                <div class="advanced_wrapper" > 
                     <div class="advanced_img">
                         <div class="circle_img img_top">
                             <img src="./assets/images/circle_img.png" alt="">
                         </div>
                         <img src="./assets/images/adfeature_1.png" alt="feature img">
                     </div>
-                    <div class="advanced_details">
+                    <div class="advanced_details"  data-aos="fade-left" data-aos-duration="2000" >
                         <h2>India’s first customizable underwater robotics</h2>
                         <p>
                             Explore our cutting-edge robotic solutions designed to redefine pool maintenance and
                             revolutionize marine research. Join us on a journey towards a brighter future underwater.
                         </p>
 
-                        <a href="#" class="btns">
-                            <div class="nav-btn">
-                                <button>
-                                    Explore
+                        <div class="nav-btn"  >
+                            <a href="contact.html" >
+                                <button style="position: relative; z-index: 1;">
+                                    Explore <i class="fa-solid fa-arrow-right"></i>
                                 </button>
-                            </div>
-                        </a>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="advanced_wrapper">
-                    <div class="advanced_details_sec">
+                    <div class="advanced_details_sec"  data-aos="fade-right" data-aos-duration="2000" >
                         <h2>Pool Buddy™ </h2>
                         <p>Experience Innovation at its Very Best with your Smart Pool Cleaning Assistant. <br>
                             An underwater robot that ensures healthy and hygienic swimming pools through its patented
                             disinfection methodology.</p>
 
-                        <a href="#" class="btns">
-                            <div class="nav-btn">
+                        <div class="nav-btn">
+                            <a href="contact.html">
                                 <button>
-                                    Explore
+                                    Explore <i class="fa-solid fa-arrow-right"></i>
                                 </button>
-                            </div>
-                        </a>
+                            </a>
+                        </div>
                     </div>
                     <div class="advanced_img">
-                        <div class="circle_img img_top">
+                        <div class="circle_img " style="width: 100%; border-radius: 100%;">
                             <img src="./assets/images/circle_img.png" alt="">
                         </div>
                         <img src="./assets/images/adfeature_1.png" alt="feature img">
@@ -431,7 +476,7 @@
 
     <section class="testinomial_container">
         <div class="container">
-            <div class="head_wrapper">
+            <div class="head_wrapper"  data-aos="fade-up" data-aos-duration="2000" >
                 <div class="bg_button">
                     <button>Testimonials</button>
                 </div>
@@ -443,7 +488,7 @@
             </div>
             <div class="testinomial_section">
                 <div class="circle_img img_top">
-                    <img src="./assets/images/circle_img.png" alt="">
+                    <img src="./assets/images/testinomial_top.png" alt="">
                 </div>
 
                 <!-- Swiper -->
@@ -484,7 +529,7 @@
                                 <p>- John D., Pool Manager</p>
                             </div>
                         </div>
-                         <div class="swiper-slide">
+                        <div class="swiper-slide">
                             <div class="testinomial_box last_box">
                                 <h6>From the Dice of our Partners</h6>
                                 <p>
@@ -495,7 +540,7 @@
                                 <p>- John D., Pool Manager</p>
                             </div>
                         </div>
-                         <div class="swiper-slide">
+                        <div class="swiper-slide">
                             <div class="testinomial_box last_box">
                                 <h6>From the Dice of our Partners</h6>
                                 <p>
@@ -523,7 +568,7 @@
 
 
 
-    <section class="who_we_are">
+    <section class="who_we_are"  data-aos="fade-up" data-aos-duration="3000" >
         <div class="container">
             <div class="head_wrapper">
                 <div class="bg_button">
@@ -691,13 +736,13 @@
                 <img src="./assets/images/newsletter.png" alt="newsletter">
                 <div class="newsletter_details">
                     <h2>Bring innovation underwater. Contact Andromeida today.</h2>
-                    <a href="#" class="btns">
-                        <div class="nav-btn">
-                            <button>
-                                Schedule a Demo
+                    <div class="nav-btn">
+                        <a href="contact.html">
+                            <button style="padding: 0 10px; width: 35%;">
+                                Schedule a Demo <i class="fa-solid fa-arrow-right"></i>
                             </button>
-                        </div>
-                    </a>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -719,13 +764,13 @@
                         <p>Join our newsletter</p>
                         <div class="news_box">
                             <input type="text" placeholder="mukuldubey517@gmail.com">
-                            <a href="#" class="btns">
-                                <div class="nav-btn">
+                            <div class="nav-btn">
+                                <a href="contact.html">
                                     <button>
-                                        Sign Up
+                                        Sign Up <i class="fa-solid fa-arrow-right"></i>
                                     </button>
-                                </div>
-                            </a>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -779,14 +824,19 @@
     <script>
         var swiper = new Swiper(".mySwiper", {
             slidesPerView: 5,
-            loop: true,
             spaceBetween: 30,
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
+            loop: true,
+            allowTouchMove: false, // manual swipe off (sirf auto chalega)
+            speed: 3000, // jitna bada, utna slow
+            autoplay: {
+                delay: 0, // bilkul delay mat do
+                disableOnInteraction: false,
             },
+            freeMode: true,
+            freeModeMomentum: false, // rukne ka chance hi nahi
         });
     </script>
+
 
     <script>
         var swiper = new Swiper(".mySwipers", {
@@ -814,9 +864,9 @@
             slidesPerView: 3,
             spaceBetween: 30,
             loop: true,
-              centeredSlides: true,
+            centeredSlides: true,
 
-             
+
             pagination: {
                 el: ".swiper-pagination",
                 clickable: true,
@@ -830,6 +880,11 @@
 
     <script src="./assets/script.js">
 
+    </script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
     </script>
 
 </body>
