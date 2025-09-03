@@ -6,11 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Andromedia</title>
     <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="./assets/media.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <!-- Add this in <head> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        #scrollBox {
+            height: 350px;
+            overflow-y: auto;
+            /* vertical scroll enabled */
+            overflow-x: hidden;
+            /* no horizontal scroll */
+            scroll-behavior: smooth;
+            /* smooth scrolling */
+            padding-top: 80px;
+        }
+
+
+        .scroll_item {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s ease;
+            margin-bottom: 100px;
+        }
+
+        .scroll_item.in-view {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        #scrollBox::-webkit-scrollbar {
+            display: none;
+            /* Chrome, Safari */
+        }
+    </style>
 
 </head>
 
@@ -23,22 +56,68 @@
         <div>
             <ul class="nav_list">
                 <li><a href="about.html">About us</a></li>
-                <li><a href="product.html">Products <i class="fa fa-angle-down" aria-hidden="true"></i></a></li>
-                <li><a href="innovation.html">Innovation <i class="fa fa-angle-down" aria-hidden="true"></i></a></li>
+                <li><a href="javascript:void">Products <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="product.html">
+                                <div class="dropdown_ellipse">
+                                    <img src="./assets/images/Ellipse.png" alt="">
+                                </div>
+                                <img src="./assets/images/uur_image.png" alt="">
+                            </a>
+                            <p style="color: #fff;">UUR</p>
+                        </li>
+                        <li class="dropdown_line">
+                            <img src="./assets/images/dropdown_line.png" alt="">
+                        </li>
+                        <li>
+                            <a href="">
+                                <div class="dropdown_ellipse">
+                                    <img src="./assets/images/Ellipse.png" alt="">
+                                </div>
+                                <img src="./assets/images/Aquasee.png" alt="">
+
+                            </a>
+                            <p> AquaSee</p>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="javascript:void">Innovation <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="innovation.html">
+                                <div class="dropdown_ellipse">
+                                    <img src="./assets/images/Ellipse.png" alt="">
+                                </div>
+                            </a>
+                            <p style="color: #fff;">Open Rov</p>
+                        </li>
+                        <li class="dropdown_line">
+                            <img src="./assets/images/dropdown_line.png" alt="">
+                        </li>
+                        <li>
+                            <a href="">
+                                <div class="dropdown_ellipse">
+                                    <img src="./assets/images/Ellipse.png" alt="">
+                                </div>
+                            </a>
+                            <p style="color: #fff;">AquaSee</p>
+
+                        </li>
+                    </ul>
+                </li>
                 <li><a href="blog.html">Blog</a></li>
             </ul>
         </div>
         <div class="nav-btn">
             <a href="contact.html">
                 <button>
-                    Let's Talk
+                    Let's Talk <i class="fa-solid fa-arrow-right"></i>
                 </button>
             </a>
         </div>
     </nav>
 
 
-    <section class="aboutus_container mx-width">
+    <section class="aboutus_container mx-width" data-aos="zoom-in" data-aos-duration="2000">
         <div class="container">
             <div class="head_wrapper" style="margin-bottom:  0;">
                 <div class="bg_button">
@@ -72,16 +151,72 @@
                         <img src="./assets/images/auv_developement.png" alt="Thrust Stand">
                     </div>
                     <div class="excellence_details">
-                        <h3>AUV Development</h3>
-                        <p>
-                            Leveraging insights from the AUV project with NIOT and our own research, we plan to
-                            integrate advanced autonomy into UUR. This means outfitting the robot with onboard
-                            navigation intelligence, obstacle avoidance, and mission planning capabilities so it can
-                            execute surveys or search missions on its own. In the near future, an Andromeida AUV could
-                            be deployed to map coral reefs or search for underwater minerals, all while the operators
-                            simply set the mission parameters and let it roam. This will unlock new possibilities in
-                            deep ocean exploration, where tethered operation is impractical.
-                        </p>
+                        <div id="scrollBox">
+                            <div class="scroll_item">
+                                <h3>AUV Development</h3>
+                                <p>
+                                    Leveraging insights from the AUV project with NIOT and our own research, we plan to
+                                    integrate advanced autonomy into UUR. This means outfitting the robot with onboard
+                                    navigation intelligence, obstacle avoidance, and mission planning capabilities so it
+                                    can
+                                    execute surveys or search missions on its own. In the near future, an Andromeida AUV
+                                    could
+                                    be deployed to map coral reefs or search for underwater minerals, all while the
+                                    operators
+                                    simply set the mission parameters and let it roam. This will unlock new
+                                    possibilities in
+                                    deep ocean exploration, where tethered operation is impractical.
+                                </p>
+                            </div>
+
+                            <div class="scroll_item">
+                                <h3>AUV Hybrid ROV-AUV “Quest”</h3>
+                                <p>
+                                    We are also exploring hybrid configurations (sometimes called “hovering AUVs” or
+                                    hybrid ROVs ). Imagine a UUR that can operate as a tethered ROV when real-time
+                                    control is needed, but also detach and go fully autonomous for segments of a
+                                    mission– the best of both worlds . Such flexibility would be invaluable in complex
+                                    scenarios (e.g. an inspection where part of the route is straightforward open water
+                                    – ideal for AUV mode – but certain tasks need a pilot’s finesse – enter ROV mode).
+                                </p>
+                            </div>
+                            <div class="scroll_item">
+                                <h3>Enhanced AI & Sensing</h3>
+                                <p>
+                                    Future upgrades will include more AI-driven features. We’re working on algorithms
+                                    for adaptive decision-making underwater – so the robot can react to unexpected
+                                    events (like encountering an obstacle or a scientific point of interest) without
+                                    awaiting surface commands. We are also investing in better sensors: imagine UUR
+                                    equipped with advanced chemical sensors to detect pollutants or
+                                    ultra-high-definition sonar for imaging the seabed in 3D.
+                                </p>
+                            </div>
+                            <div class="scroll_item">
+                                <h3>From Underwater to Surface</h3>
+                                <p>
+                                    While underwater is our core, we recognize the interconnectedness of marine systems.
+                                    Down the line, Andromeida aims to expand into Uncrewed Surface Vessels (USVs) that
+                                    can work in tandem with our underwater robots – much like how combining USVs and
+                                    UUVs can create powerful coordinated systems . A surface drone could deploy an AUV,
+                                    relay communications, and provide a charging base, enabling persistent ocean
+                                    presence. This holistic approach mirrors what leading companies like Ocean Infinity
+                                    are doing with integrated fleets of robotic ships and sub-sea vehicles for smarter,
+                                    greener maritime operations
+                                </p>
+                            </div>
+                            <div class="scroll_item">
+                                <h3>Global Outreach and Scaling</h3>
+                                <p>
+                                    In the coming years, we aim to deploy UURs (and future AUVs) across research
+                                    institutions and industries globally. We are scaling our manufacturing to meet
+                                    demand and working on making our robots even more affordable without compromising
+                                    quality, so that every marine researcher or explorer who dreams of an underwater
+                                    robot can have one. We’re also keen on establishing training centers (in partnership
+                                    with universities) where we can cultivate talent in operating and customizing these
+                                    robots – ensuring a supportive ecosystem as the user base grows.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -89,7 +224,7 @@
     </section>
 
 
-    <section class="who_we_are">
+    <section class="who_we_are" data-aos="zoom-in" data-aos-duration="2000">
         <div class="container">
             <div class="section_card">
                 <h2>
@@ -98,13 +233,13 @@
                 <p>
                     Book a call today and start building your robot.
                 </p>
-                <a href="#" class="btns">
-                    <div class="nav-btn">
+                <div class="nav-btn">
+                    <a href="contact.html">
                         <button>
-                            Let’s Talk
+                            Let's Talk <i class="fa-solid fa-arrow-right"></i>
                         </button>
-                    </div>
-                </a>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -121,13 +256,13 @@
                         <p>Join our newsletter</p>
                         <div class="news_box">
                             <input type="text" placeholder="mukuldubey517@gmail.com">
-                            <a href="#" class="btns">
-                                <div class="nav-btn">
+                            <div class="nav-btn">
+                                <a href="contact.html">
                                     <button>
-                                        Sign Up
+                                        Sign Up <i class="fa-solid fa-arrow-right"></i>
                                     </button>
-                                </div>
-                            </a>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -151,17 +286,40 @@
                     </ul>
                     <ul class="footer_link">
                         <li><a href="">Science</a></li>
-                        <li><a href="">Innovation</a></li>
-                        <li><a href="">Products</a></li>
-                        <li><a href="">About</a></li>
+                        <li><a href="innovation.html">Innovation</a></li>
+                        <li><a href="product.html">Products</a></li>
+                        <li><a href="about.html">About</a></li>
                         <li>
-                            <a href="">Contact</a>
+                            <a href="contact.html">Contact</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
     </footer>
+
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const items = document.querySelectorAll(".scroll_item");
+
+            const observer = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add("in-view");
+                            // unobserve if you want each item to animate only once
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                },
+                { threshold: 0.2 } // trigger when 20% visible
+            );
+
+            items.forEach((item) => observer.observe(item));
+        });
+    </script>
 
 
 
@@ -177,6 +335,11 @@
 
     <script src="./assets/script.js">
 
+    </script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
     </script>
 </body>
 

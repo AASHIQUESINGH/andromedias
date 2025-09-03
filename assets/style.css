@@ -37,6 +37,7 @@ nav {
   );
 
   margin-bottom: 0;
+  position: relative;
 }
 
 .nav_list li {
@@ -359,6 +360,7 @@ nav {
     rgba(15, 32, 100, 0.3) 0%,
     rgba(21, 118, 135, 0.3) 100%
   );
+  backdrop-filter: blur(4.150000095367432px);
   /* backdrop-filter: blur(4.150000095367432px); */
   border: 1px solid rgba(21, 121, 136);
   border-radius: 32px;
@@ -387,10 +389,15 @@ nav {
   gap: 5px;
   position: relative;
   background: linear-gradient(
+    90deg,
+    rgba(15, 28, 99, 0.3) 0%,
+    rgba(21, 121, 136, 0.3) 100%
+  );
+  /* background: linear-gradient(
     180deg,
     rgba(0, 127, 139, 0.3),
     rgba(0, 127, 139, 0.3)
-  );
+  ); */
 }
 
 /* .nav-btn button {
@@ -399,6 +406,24 @@ nav {
   gap: 5px;
   overflow: hidden;  
 } */
+
+.nav_list::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 1px solid rgba(21, 121, 136, 1);
+  border-radius: 52px;
+  /* opacity: 0.5; */
+  mask-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 1) 20%,
+    transparent 80%
+  );
+  pointer-events: none;
+}
 
 .nav-btn button i {
   opacity: 0;
@@ -1066,7 +1091,7 @@ footer {
   padding-top: 7px;
   height: 4px;
   width: 100%;
-  background: url("./images/footer_top_line.png");
+  background: url("./images/footer_row.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
@@ -1134,6 +1159,10 @@ footer {
     linear-gradient(to right, rgba(15, 28, 99, 1), rgba(21, 121, 136, 1))
       border-box;
   border-radius: 52px;
+}
+
+.news_box input:focus {
+  outline: none;
 }
 
 .news_box {
@@ -1228,6 +1257,74 @@ footer {
   position: relative;
   display: inline-block;
   height: 420px;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.uu_head:hover {
+  transform: scale(1.02); /* thoda zoom effect */
+}
+
+.uu_head:hover h5 {
+  opacity: 0;
+}
+
+/* Hidden hover box by default */
+.uur_hover_box {
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  /* background: rgba(0,0,0,0.4); */
+  /* background: linear-gradient(rgba(42, 127, 127, 0.2), rgba(0, 0, 0, 0.7)); */
+  background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.8) 0%,
+      rgba(0, 0, 0, 0.8) 100%
+    ),
+    50% / cover no-repeat;
+  color: #fff;
+  padding: 0px 10px;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(40px);
+  transition: all 0.4s ease-in-out;
+  border-radius: 14px;
+}
+
+.uur_hover_box p {
+  text-align: center;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 1);
+  margin-bottom: 0;
+}
+
+.uur_hover_box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* padding-top: 100px; */
+  border: 1px solid rgba(21, 121, 136, 1);
+  border-radius: 14px;
+  /* opacity: 0.5; */
+  mask-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 1) 20%,
+    transparent 80%
+  );
+  pointer-events: none;
+}
+
+/* Hover par visible */
+.uu_head:hover .uur_hover_box {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .uu_head::after {
@@ -1264,6 +1361,8 @@ footer {
   max-width: 100%;
   /* padding: 0 10px; */
   z-index: 1;
+  opacity: 1;
+  transition: all 0.4s ease-in-out;
 }
 
 /* URR acedmic  */
@@ -1593,7 +1692,7 @@ footer {
 
 .bg_line_h {
   position: absolute;
-  height: 1300px;
+  height: 1600px;
 }
 
 .bg_line_h img {
@@ -1660,6 +1759,11 @@ footer {
 }
 
 .team_img {
+  position: relative;
+  /* width: 300px;  */
+  overflow: hidden;
+  border-radius: 10px;
+  transition: transform 0.4s ease;
   width: 100%;
   text-align: center;
 }
@@ -1669,6 +1773,49 @@ footer {
   height: auto;
   display: block;
   border-radius: 10px;
+}
+
+.team_details {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 265px;
+  width: 100%;
+  color: #fff;
+  padding-top: 86px;
+  padding-left: 25px;
+  padding-right: 25px;
+  transform: translateY(100%); /* hide initially */
+  transition: transform 1s ease;
+  border-radius: 35px;
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+  /* background: linear-gradient(180deg, rgba(42, 127, 127, 0.20) 20%, rgba(42, 127, 127, 0.00) 100%); */
+  margin-bottom: 10px;
+}
+
+.team_details h4 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 0;
+  padding-bottom: 2px;
+}
+
+.team_details p {
+  font-weight: 400;
+  margin-bottom: 0;
+  padding-bottom: 2px;
+}
+
+.team_details:last-of-type {
+  font-size: 14px;
+}
+
+.team_img:hover {
+  transform: translateY(-12px); /* pura box thoda upar move hoga */
+}
+
+.team_img:hover .team_details {
+  transform: translateY(0); /* smoothly show details */
 }
 
 /* Investor details  */
@@ -1986,6 +2133,10 @@ footer {
   );
 }
 
+.contact_input input:focus {
+  outline: none;
+}
+
 .contact_input textarea {
   padding: 15px;
   color: #fff;
@@ -2000,6 +2151,10 @@ footer {
     rgba(255, 255, 255, 1) 0%,
     transparent 200%
   );
+}
+
+.contact_input textarea:focus {
+  outline: none;
 }
 
 .input_btn {

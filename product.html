@@ -11,6 +11,8 @@
     <!-- Add this in <head> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -22,24 +24,70 @@
         <div>
             <ul class="nav_list">
                 <li><a href="about.html">About us</a></li>
-                <li><a href="product.html">Products <i class="fa fa-angle-down" aria-hidden="true"></i></a></li>
-                <li><a href="innovation.html">Innovation <i class="fa fa-angle-down" aria-hidden="true"></i></a></li>
+                <li><a href="javascript:void">Products <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="product.html">
+                                <div class="dropdown_ellipse">
+                                    <img src="./assets/images/Ellipse.png" alt="">
+                                </div>
+                                <img src="./assets/images/uur_image.png" alt="">
+                            </a>
+                            <p style="color: #fff;">UUR</p>
+                        </li>
+                        <li class="dropdown_line">
+                            <img src="./assets/images/dropdown_line.png" alt="">
+                        </li>
+                        <li>
+                            <a href="">
+                                <div class="dropdown_ellipse">
+                                    <img src="./assets/images/Ellipse.png" alt="">
+                                </div>
+                                <img src="./assets/images/Aquasee.png" alt="">
+
+                            </a>
+                            <p> AquaSee</p>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="javascript:void">Innovation <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="innovation.html">
+                                <div class="dropdown_ellipse">
+                                    <img src="./assets/images/Ellipse.png" alt="">
+                                </div>
+                            </a>
+                            <p style="color: #fff;">Open Rov</p>
+                        </li>
+                        <li class="dropdown_line">
+                            <img src="./assets/images/dropdown_line.png" alt="">
+                        </li>
+                        <li>
+                            <a href="">
+                                <div class="dropdown_ellipse">
+                                    <img src="./assets/images/Ellipse.png" alt="">
+                                </div>
+                            </a>
+                            <p style="color: #fff;">AquaSee</p>
+
+                        </li>
+                    </ul>
+                </li>
                 <li><a href="blog.html">Blog</a></li>
             </ul>
         </div>
         <div class="nav-btn">
             <a href="contact.html">
                 <button>
-                    Let's Talk
+                    Let's Talk <i class="fa-solid fa-arrow-right"></i>
                 </button>
             </a>
         </div>
     </nav>
 
 
-    <section class="about_section">
+    <section class="about_section"  >
         <div class="container">
-            <div class="head_wrapper">
+            <div class="head_wrapper" data-aos="zoom-in" data-aos-duration="2000">
                 <div class="bg_button">
                     <button>Our Products</button>
                 </div>
@@ -54,7 +102,7 @@
                     </p>
                 </div>
             </div>
-            <div class="about_img">
+            <div class="about_img mx-width">
                 <div class="circle_img img_top">
                     <img src="./assets/images/circle_img.png" alt="">
                 </div>
@@ -63,7 +111,7 @@
         </div>
     </section>
 
-    <section class="bg_section">
+    <section class="bg_section" data-aos="fade-up" data-aos-duration="2000">
         <div class="container">
             <div class="head_wrapper">
                 <div class="wh_heading">
@@ -82,21 +130,54 @@
                     <img src="./assets/images/about_img1.jpg" alt="">
                     <h5>Modular & <br>
                         Customizable Design</h5>
+
+                    <div class="uur_hover_box">
+                        <p>
+                            UUR features a universal payload mount with standardized power and communication ports,
+                            allowing seamless plug-and-play integration of sensors, cameras, and robotic tools. It’s
+                            built for researchers who want flexibility and customization at every level.
+                        </p>
+                    </div>
                 </div>
                 <div class="uu_head">
                     <img src="./assets/images/about_img2.jpg" alt="">
                     <h5>Advanced <br>
                         Toolset & Real-Time SDK</h5>
+
+                    <div class="uur_hover_box">
+                        <p>
+                            With a swappable tool palette and an open SDK, UUR enables live experiment monitoring, data
+                            retrieval, and real-time adjustments. Ideal for iterative underwater research and
+                            mission-specific configurations.
+                        </p>
+                    </div>
                 </div>
                 <div class="uu_head">
                     <img src="./assets/images/about_img1.jpg" alt="">
                     <h5>Precision,<br>
                         Stability & Imaging</h5>
+
+                    <div class="uur_hover_box">
+                        <p>
+                            Equipped with AI-enhanced imaging (AquaSee), advanced thrusters, and stabilization systems,
+                            UUR delivers unmatched accuracy even in strong currents or murky conditions — maximizing
+                            dive time and data quality.
+                        </p>
+                    </div>
                 </div>
                 <div class="uu_head">
                     <img src="./assets/images/about_img2.jpg" alt="">
                     <h5>Built to <br>
                         Last, Built for You</h5>
+
+
+                    <div class="uur_hover_box">
+                        <p>
+                            UUR undergoes in-house pressure and thrust testing for durability and efficiency. Designed
+                            to meet APQP standards, it’s rugged and research-ready — and can be tailored to your exact
+                            mission, from propulsion to power systems.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -133,7 +214,7 @@
                         </div>
                         <div class="innovation_box">
                             <img src="./assets/images/hands_on_learning.png" alt="">
-                            <div class="innovations_details">
+                            <div class="innovations_details" data-aos="fade-right" data-aos-duration="2000">
                                 <h4>Hands-on Learning</h4>
                                 <p>
                                     A perfect platform for students and researchers to gain practical
@@ -146,7 +227,7 @@
                         </div>
                         <div class="innovation_box">
                             <img src="./assets/images/lab_firendly_design.png" alt="">
-                            <div class="innovations_details">
+                            <div class="innovations_details" data-aos="fade-left" data-aos-duration="2000">
                                 <h4>Lab-Friendly Design</h4>
                                 <p>
                                     The Academic UUR is slightly smaller and lighter, suitable for test tanks, pools,
@@ -164,7 +245,7 @@
                         </div>
                         <div class="innovation_box">
                             <img src="./assets/images/plug_and_play.png" alt="">
-                            <div class="innovations_details">
+                            <div class="innovations_details" data-aos="fade-right" data-aos-duration="2000">
                                 <h4>Plug-and-Play Customization</h4>
                                 <p>
                                     Comes with a rich library of sample payload interfaces and template code. Whether
@@ -177,7 +258,7 @@
                         </div>
                         <div class="innovation_box">
                             <img src="./assets/images/robort_service.png" alt="">
-                            <div class="innovations_details">
+                            <div class="innovations_details" data-aos="fade-left" data-aos-duration="2000">
                                 <h4>Robot-as-a-Service Option</h4>
                                 <p>
                                     For educational institutions, we also offer flexible leasing or Robot as-a-Service
@@ -203,13 +284,13 @@
                     <h2>Explore Andromeida’s
                         Customized Robots</h2>
                     <p>Start building your customized robots now.</p>
-                    <a href="#" class="btns">
-                        <div class="nav-btn">
+                    <div class="nav-btn">
+                        <a href="contact.html">
                             <button>
-                                Explore Now
+                                Explore Now <i class="fa-solid fa-arrow-right"></i>
                             </button>
-                        </div>
-                    </a>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -233,7 +314,7 @@
                         </div>
                         <div class="innovation_box">
                             <img src="./assets/images/hands_on_learning.png" alt="">
-                            <div class="innovations_details">
+                            <div class="innovations_details" data-aos="fade-right" data-aos-duration="2000">
                                 <h4>Enhanced Performance</h4>
                                 <p>
                                     UUR-Quest is equipped with more powerful thrusters and advanced navigation systems,
@@ -245,7 +326,7 @@
                         </div>
                         <div class="innovation_box">
                             <img src="./assets/images/lab_firendly_design.png" alt="">
-                            <div class="innovations_details">
+                            <div class="innovations_details" data-aos="fade-left" data-aos-duration="2000">
                                 <h4>Heavy Payload Capacity</h4>
                                 <p>
                                     With a reinforced frame and upgraded buoyancy control, the Quest edition can carry
@@ -260,9 +341,9 @@
                         <div class="circle_img">
                             <img src="./assets/images/circle_img.png" alt="">
                         </div>
-                        <div class="innovation_box">
+                        <div class="innovation_box" >
                             <img src="./assets/images/plug_and_play.png" alt="">
-                            <div class="innovations_details">
+                            <div class="innovations_details" data-aos="fade-right" data-aos-duration="2000">
                                 <h4>Rugged & Reliable</h4>
                                 <p>
                                     Each UUR-Quest undergoes rigorous testing in our pressure chamber well beyond
@@ -276,7 +357,7 @@
                         </div>
                         <div class="innovation_box">
                             <img src="./assets/images/robort_service.png" alt="">
-                            <div class="innovations_details">
+                            <div class="innovations_details" data-aos="fade-left" data-aos-duration="2000">
                                 <h4>Real-Time Data & Control</h4>
                                 <p>
                                     Designed with industry in mind, UUR-Quest integrates seamlessly with vessel systems
@@ -295,7 +376,7 @@
     </section>
 
 
-    <section class="who_we_are">
+    <section class="who_we_are" data-aos="fade-up" data-aos-duration="2000">
         <div class="container">
             <div class="head_wrapper">
                 <div class="bg_button">
@@ -368,19 +449,19 @@
     </section>
 
 
-    <section class="who_we_are">
+    <section class="who_we_are" data-aos="zoom-in" data-aos-duration="2000">
         <div class="container">
             <div class="newsletter_div">
                 <img src="./assets/images/newsletter.png" alt="newsletter">
                 <div class="newsletter_details">
                     <h2>Bring innovation underwater. Contact Andromeida today.</h2>
-                    <a href="#" class="btns">
-                        <div class="nav-btn">
-                            <button>
-                                Schedule a Demo
+                    <div class="nav-btn">
+                        <a href="contact.html">
+                            <button style="padding: 0 10px; width: 35%;">
+                                Schedule a Demo <i class="fa-solid fa-arrow-right"></i>
                             </button>
-                        </div>
-                    </a>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -397,13 +478,13 @@
                         <p>Join our newsletter</p>
                         <div class="news_box">
                             <input type="text" placeholder="mukuldubey517@gmail.com">
-                            <a href="#" class="btns">
-                                <div class="nav-btn">
+                            <div class="nav-btn">
+                                <a href="contact.html">
                                     <button>
-                                        Sign Up
+                                        Sign Up <i class="fa-solid fa-arrow-right"></i>
                                     </button>
-                                </div>
-                            </a>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -427,11 +508,11 @@
                     </ul>
                     <ul class="footer_link">
                         <li><a href="">Science</a></li>
-                        <li><a href="">Innovation</a></li>
-                        <li><a href="">Products</a></li>
-                        <li><a href="">About</a></li>
+                        <li><a href="innovation.html">Innovation</a></li>
+                        <li><a href="product.html">Products</a></li>
+                        <li><a href="about.html">About</a></li>
                         <li>
-                            <a href="">Contact</a>
+                            <a href="contact.html">Contact</a>
                         </li>
                     </ul>
                 </div>
@@ -453,6 +534,11 @@
 
     <script src="./assets/script.js">
 
+    </script>
+
+     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
     </script>
 </body>
 
