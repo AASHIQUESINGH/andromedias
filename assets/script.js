@@ -31,3 +31,6 @@ hamburger.addEventListener("click", () => {
 closeBtn.addEventListener("click", () => {
   mobileNav.classList.remove("active"); // close to left
 });
+
+
+ 

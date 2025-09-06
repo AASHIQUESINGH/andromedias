@@ -365,6 +365,19 @@
     <script>
         AOS.init();
     </script>
+
+    <script>
+        if (window.innerWidth < 768) {
+            document.querySelectorAll('.col_solution[data-aos]').forEach(el => {
+                el.removeAttribute('data-aos');
+                el.removeAttribute('data-aos-duration'); // optional: remove duration too
+            });
+        }
+
+        AOS.init({
+            duration: 1500
+        });
+    </script>
 </body>
 
 </html>

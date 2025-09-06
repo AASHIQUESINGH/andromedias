@@ -14,6 +14,48 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
+    <style>
+        .hero_details>* {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        /* Staggered delays */
+        .hero_inner_head {
+            transition-delay: 0.3s;
+        }
+
+        .hero_heading {
+            transition-delay: 0.4s;
+        }
+
+        .hero_details p {
+            transition-delay: 0.6s;
+        }
+
+        /* Trigger animation */
+        .hero_details.animate-in>* {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal-word {
+            display: inline-block;
+            white-space: nowrap;
+            overflow: hidden;
+            width: 6.5%;
+            /* starting width */
+            transition: width 1.2s ease;
+            /* smooth width animation */
+        }
+
+        .reveal-word.active {
+            width: 37.5%;
+            /* expand to full width */
+        }
+    </style>
+
 </head>
 
 <body>
@@ -110,20 +152,19 @@
                 </video>
 
                 <div class="hero_details">
-                    <div class="hero_inner_head">
-                        <span>
-                            New
-                        </span>
+                    <div class="hero_inner_head reveal-word">
+                        <span>New</span>
                         Customizable Underwater Robotics
                     </div>
                     <h1 class="hero_heading">
-                        Andromeida
-                        Underwater Robotics
+                        Andromeida Underwater Robotics
                     </h1>
                     <p>
                         Empowering Ocean Innovation, Dive into Cutting-Edge Underwater Robotics
                     </p>
                 </div>
+
+
                 <div class="vedio_shadow">
                     <img src="./assets/images/bg_backshadow.png" alt="shadow">
                 </div>
@@ -199,7 +240,7 @@
                 <div class="hero-wrapper">
 
                     <!-- Left Image -->
-                    <div class="hero-image">
+                    <div class="hero-image" data-aos="fade-up" data-aos-duration="2000">
                         <div class="circle_img">
                             <img src="./assets/images/circle_img.png" alt="">
                         </div>
@@ -207,7 +248,7 @@
                     </div>
 
                     <!-- Right Content -->
-                    <div class="hero-content" data-aos="fade-left" data-aos-duration="2000">
+                    <div class="hero-content">
                         <div class="hero_inner_head  hero-width">
                             <span>
                                 New
@@ -348,7 +389,7 @@
                 </div>
             </div>
 
-            <div class="comming_soon" data-aos="zoom-in" data-aos-duration="2000">
+            <div class="comming_soon">
                 <img src="./assets/images/comming_soon.png" alt="comming soon">
             </div>
         </div>
@@ -453,7 +494,7 @@
                         </div>
                         <img src="./assets/images/adfeature_1.png" alt="feature img">
                     </div>
-                    <div class="advanced_details" data-aos="fade-left" data-aos-duration="2000">
+                    <div class="advanced_details" data-aos="fade-up" data-aos-duration="2000">
                         <h2>India’s first customizable underwater robotics</h2>
                         <p>
                             Explore our cutting-edge robotic solutions designed to redefine pool maintenance and
@@ -470,7 +511,7 @@
                     </div>
                 </div>
                 <div class="advanced_wrapper mobile_advanced">
-                    <div class="advanced_details_sec" data-aos="fade-right" data-aos-duration="2000">
+                    <div class="advanced_details_sec" data-aos="fade-up" data-aos-duration="2000">
                         <h2>Pool Buddy™ </h2>
                         <p>Experience Innovation at its Very Best with your Smart Pool Cleaning Assistant. <br>
                             An underwater robot that ensures healthy and hygienic swimming pools through its patented
@@ -666,7 +707,7 @@
                         <i class="fa-solid fa-arrow-left"></i>
                     </div>
                     <div class="g_next_icon icon_arrow">
-                        <i class="fa-solid fa-arrow-left"></i>
+                        <i class="fa-solid fa-arrow-right"></i>
                     </div>
                 </div>
             </div>
@@ -751,7 +792,7 @@
     </section>
 
 
-    <section class="who_we_are" data-aos="zoom-in" data-aos-duration="2000">
+    <section class="who_we_are">
         <div class="container">
             <div class="newsletter_div">
                 <img src="./assets/images/newsletter.png" alt="newsletter">
@@ -830,6 +871,25 @@
 
 
 
+
+    <script>
+        window.addEventListener('load', () => {
+            document.querySelector('.hero_details').classList.add('animate-in');
+        });
+
+    </script>
+
+    <script>
+        window.addEventListener("load", () => {
+            const word = document.querySelector(".reveal-word");
+
+            // add small delay before expanding
+            setTimeout(() => {
+                word.classList.add("active");
+            }, 500); // delay in ms
+        });
+
+    </script>
 
 
 
@@ -938,6 +998,19 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
+    </script>
+
+    <script>
+        if (window.innerWidth < 768) {
+            document.querySelectorAll('.col_solution[data-aos]').forEach(el => {
+                el.removeAttribute('data-aos');
+                el.removeAttribute('data-aos-duration'); // optional: remove duration too
+            });
+        }
+
+        AOS.init({
+            duration: 1500
+        });
     </script>
 
 </body>

@@ -1012,11 +1012,14 @@ nav {
 }
 
 .mySwipers .swiper-slide img {
+  padding: 20px 0;
   opacity: 0.4;
+  transition: transform 0.4s ease; /* smooth scaling */
 }
 
 .mySwipers .swiper-slide-thumb-active img {
   opacity: 1;
+  transform: scale(1.2); /* enlarge smoothly */
 }
 
 /* faq section*/
