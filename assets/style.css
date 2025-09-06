@@ -40,6 +40,14 @@ nav {
   position: relative;
 }
 
+.humburger {
+  display: none;
+}
+
+.mobile_nav {
+  display: none;
+}
+
 .nav_list li {
   list-style: none;
   font-size: 16px;
@@ -145,6 +153,14 @@ nav {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
+}
+
+.nav_list li i {
+  transition: transform 0.5s ease; /* smooth transition setup */
+}
+
+.nav_list li:hover i {
+  transform: rotate(180deg);
 }
 
 .nav_list li:hover::after {
@@ -360,16 +376,17 @@ nav {
     rgba(15, 32, 100, 0.3) 0%,
     rgba(21, 118, 135, 0.3) 100%
   );
+
   backdrop-filter: blur(4.150000095367432px);
   /* backdrop-filter: blur(4.150000095367432px); */
   border: 1px solid rgba(21, 121, 136);
   border-radius: 32px;
   /* opacity: 0.5; */
-  mask-image: linear-gradient(
+  /* mask-image: linear-gradient(
     to left,
     rgba(255, 255, 255, 1) 0%,
     transparent 200%
-  );
+  ); */
   transition: background 0.3s ease-in-out; /* smooth transition */
 }
 
@@ -750,6 +767,18 @@ nav {
   padding-top: 65px;
 }
 
+.innovation_bg {
+  margin-top: -27.5px;
+  height: 100%;
+  width: 100%;
+}
+
+.innovation_bg img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
 /* advanced feature  */
 
 .advanced_f {
@@ -889,6 +918,55 @@ nav {
 
 .testinomial_arrow img {
   cursor: pointer;
+}
+
+.icon_arrow {
+  height: 52px;
+  width: 52px;
+  border-radius: 50%;
+  border: 1px solid rgba(21, 121, 136, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden; /* keep pseudo inside */
+  background-color: rgba(42, 127, 127, 0.2);
+}
+
+.icon_arrow i {
+  color: #fff;
+  font-size: 21px;
+}
+
+.icon_arrow::before {
+  content: ""; /* define always */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid rgba(21, 121, 136, 1);
+  border-radius: 50%;
+  opacity: 0; /* hidden initially */
+  mask-image: linear-gradient(to bottom, black 20%, transparent 80%);
+  transform: scale(1.2); /* start slightly bigger */
+  transition: all 0.4s ease; /* smooth animation */
+  pointer-events: none;
+  background: linear-gradient(
+    180deg,
+    rgba(42, 127, 127, 0.2) 0%,
+    rgba(42, 127, 127, 0) 100%
+  );
+}
+
+.icon_arrow:hover {
+  border: 0;
+  background: none;
+}
+
+.icon_arrow:hover::before {
+  opacity: 1; /* fade in */
+  transform: scale(1); /* shrink smoothly */
 }
 
 /* gallery images  */
@@ -1250,19 +1328,22 @@ footer {
 .uur_wrapper {
   display: flex;
   gap: 24px;
-  align-items: center;
+  /* align-items: center; */
 }
 
 .uu_head {
   position: relative;
   display: inline-block;
   height: 420px;
+  width: 100%;
   overflow: hidden;
-  transition: all 0.3s ease-in-out;
+  transition: height 0.3s ease-in-out, margin 0.3s ease-in-out;
 }
 
 .uu_head:hover {
-  transform: scale(1.02); /* thoda zoom effect */
+  height: 460px;
+  margin-top: -20px;
+  /* transform: scale(1.02); thoda zoom effect */
 }
 
 .uu_head:hover h5 {
@@ -1604,6 +1685,17 @@ footer {
 
 /* Excellence innovation  */
 
+.excellence_img {
+  position: relative;
+}
+
+.innovation_stoke {
+  position: absolute;
+  top: -60%;
+  left: -20%;
+  z-index: -1;
+}
+
 .excellence_box {
   display: flex;
   gap: 70px;
@@ -1890,6 +1982,20 @@ footer {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  margin-bottom: 0;
+}
+
+.blog_date {
+  color: #fff;
+  padding-top: 20px;
+}
+
+.blog_date span {
+  color: #fff;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
 .blog_details {
@@ -1912,6 +2018,35 @@ footer {
 .back_btn {
   position: absolute;
   top: 125px;
+}
+
+.img_wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.img_wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid rgba(21, 121, 136, 1);
+  border-radius: 52px;
+  /* opacity: 0.5; */
+  mask-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 1) 20%,
+    transparent 80%
+  );
+  pointer-events: none;
+  opacity: 0; /* by default hidden */
+  transition: opacity 0.3s ease;
+}
+
+.back_btn:hover .img_wrapper::before {
+  opacity: 1; /* show on hover */
 }
 
 .back_btn a {
