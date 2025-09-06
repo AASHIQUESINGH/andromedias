@@ -21,6 +21,9 @@
     color: #333;
   }
 
+  .hero_inner_head{
+    font-size: 14px;
+  }
   /* subnav hidden by default */
   .subnavList {
     list-style: none;
@@ -170,11 +173,11 @@
   /* homepage  */
 
   .hero_section video {
-    height: 55vh;
+    height: 100vh;
   }
 
   .reveal-word.active {
-    width: 98% !important;
+    width: 87% !important;
   }
 
   .hero_details {
@@ -186,7 +189,7 @@
     gap: 12px;
   }
   .hero_details h1 {
-    font-size: 34px;
+    font-size: 30px;
     width: 100%;
   }
 
@@ -254,7 +257,7 @@
   }
 
   .section_card h2 {
-    font-size: 22px;
+    font-size: 18px;
   }
   .section_card p {
     text-align: center;
@@ -284,7 +287,7 @@
 
   .mySwipers {
     padding-top: 30px !important;
-    width: 60%;
+    width: 65%;
     margin: 0 auto;
   }
 
@@ -301,7 +304,7 @@
   }
 
   .newsletter_details h2 {
-    font-size: 24px;
+    font-size: 18px;
   }
 
   .mobile_btn {
@@ -309,6 +312,7 @@
   }
 
   .mobile_btn_w {
+    font-size: 15px;
     width: 50% !important;
   }
   .newsletter_details h2 {
@@ -326,7 +330,7 @@
   }
 
   .hero-width {
-    width: 97.5%;
+    width: 89%;
   }
 
   .hero-content h2 {

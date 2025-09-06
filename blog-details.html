@@ -13,6 +13,28 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
+    <style>
+        .reveal-line {
+            display: inline-block;
+            overflow: hidden;
+            opacity: 0;
+            /* hidden initially */
+            transform: translateY(-30px);
+            /* start above */
+            filter: blur(8px);
+            /* blur effect */
+            transition: transform 0.8s ease, opacity 0.8s ease, filter 0.8s ease;
+        }
+
+        /* active class to animate */
+        .reveal-line.show {
+            transform: translateY(0);
+            /* move to original position */
+            opacity: 1;
+            filter: blur(0);
+        }
+    </style>
+
 </head>
 
 <body>
@@ -135,10 +157,17 @@
                 </div>
 
                 <div class="">
-                    <h1>From Pools to the Deep Sea: The Evolution of Andromeida Robotics</h1>
+                    <h1>
+                        <span class="reveal-line">
+                            From Pools to the Deep Sea: The Evolution of Andromeida Robotics
+                        </span>
+                    </h1>
                     <p>
-                        How a pool-cleaning robot sparked a deep-tech revolution in underwater research — the Andromeida
-                        story from surface to seafloor.
+                        <span class="reveal-line">
+                            How a pool-cleaning robot sparked a deep-tech revolution in underwater research — the
+                            Andromeida
+                            story from surface to seafloor.
+                        </span>
                     </p>
                 </div>
             </div>
@@ -306,6 +335,19 @@
     <script src="./assets/script.js">
 
     </script>
+
+    <script>
+        window.addEventListener("load", () => {
+            const lines = document.querySelectorAll(".reveal-line");
+            lines.forEach((line, index) => {
+                setTimeout(() => {
+                    line.classList.add("show");
+                }, index * 300); // stagger: 0.3s per line
+            });
+        });
+
+    </script>
+
 
     <script>
         if (window.innerWidth < 768) {

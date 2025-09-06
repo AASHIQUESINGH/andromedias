@@ -14,6 +14,29 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
+
+    <style>
+        .reveal-line {
+            display: inline-block;
+            overflow: hidden;
+            opacity: 0;
+            /* hidden initially */
+            transform: translateY(-30px);
+            /* start above */
+            filter: blur(8px);
+            /* blur effect */
+            transition: transform 0.8s ease, opacity 0.8s ease, filter 0.8s ease;
+        }
+
+        /* active class to animate */
+        .reveal-line.show {
+            transform: translateY(0);
+            /* move to original position */
+            opacity: 1;
+            filter: blur(0);
+        }
+    </style>
+
 </head>
 
 <body>
@@ -129,12 +152,15 @@
                 </div>
 
                 <div class="about_us">
-                    <h2> Meet UUR™</h2>
+                    <h2><span class="reveal-line"> Meet UUR™</span></h2>
                     <p>
-                        Our flagship product, UUR™ (Unmanned Underwater Robot), is a state-of-the-art remotely operated
-                        vehicle (RoV) built to revolutionize marine research . UUR™ is engineered as a versatile,
-                        modular platform that gives scientists and explorers an unprecedented level of customization and
-                        control underwater. Key features of UUR include:
+                        <span class="reveal-line">Our flagship product, UUR™ (Unmanned Underwater Robot), is a
+                            state-of-the-art remotely
+                            operated
+                            vehicle (RoV) built to revolutionize marine research . UUR™ is engineered as a versatile,
+                            modular platform that gives scientists and explorers an unprecedented level of customization
+                            and
+                            control underwater. Key features of UUR include:</span>
                     </p>
                 </div>
             </div>
@@ -576,6 +602,20 @@
     <script>
         AOS.init();
     </script>
+
+
+    <script>
+        window.addEventListener("load", () => {
+            const lines = document.querySelectorAll(".reveal-line");
+            lines.forEach((line, index) => {
+                setTimeout(() => {
+                    line.classList.add("show");
+                }, index * 300); // stagger: 0.3s per line
+            });
+        });
+
+    </script>
+
 
     <script>
         if (window.innerWidth < 768) {
