@@ -136,12 +136,30 @@
                 <i class="fa-solid fa-xmark"></i>
             </div>
             <ul>
-                <li><a href="#">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About us</a></li>
-                <li><a href="">Products</a></li>
-                <li><a href="">Innovation</a></li>
+                <li class="navItem hasSubnav">
+                    <a href="#">
+                        Products
+                        <i class="fa-solid fa-angle-down"></i>
+                    </a>
+                    <ul class="subnavList">
+                        <li><a href="product.html">UUR</a></li>
+                        <li><a href="javascript:void">AquaSee</a></li>
+                    </ul>
+                </li>
+                <li class="navItem hasSubnav">
+                    <a href="#">
+                        Innovation
+                         <i class="fa-solid fa-angle-down"></i>
+                    </a>
+                    <ul class="subnavList">
+                        <li><a href="innovation.html">Open Rov</a></li>
+                        <li><a href="javascript:void">AquaSee</a></li>
+                    </ul>
+                </li>
                 <li><a href="blog.html">Blog</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
 
@@ -248,7 +266,7 @@
                     </div>
 
                     <!-- Right Content -->
-                    <div class="hero-content">
+                    <div class="hero-content hero_content_m">
                         <div class="hero_inner_head  hero-width">
                             <span>
                                 New
@@ -1001,7 +1019,7 @@
     </script>
 
     <script>
-        if (window.innerWidth < 768) {
+        if (window.innerWidth < 767) {
             document.querySelectorAll('.col_solution[data-aos]').forEach(el => {
                 el.removeAttribute('data-aos');
                 el.removeAttribute('data-aos-duration'); // optional: remove duration too

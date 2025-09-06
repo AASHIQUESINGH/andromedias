@@ -30,6 +30,26 @@
             transition: height 0.6s ease;
             cursor: pointer;
         }
+
+        .reveal-line {
+            display: inline-block;
+            overflow: hidden;
+            opacity: 0;
+            /* hidden initially */
+            transform: translateY(-30px);
+            /* start above */
+            filter: blur(8px);
+            /* blur effect */
+            transition: transform 0.8s ease, opacity 0.8s ease, filter 0.8s ease;
+        }
+
+        /* active class to animate */
+        .reveal-line.show {
+            transform: translateY(0);
+            /* move to original position */
+            opacity: 1;
+            filter: blur(0);
+        }
     </style>
 </head>
 
@@ -110,17 +130,35 @@
             <i class="fa-solid fa-xmark"></i>
         </div>
         <ul>
-            <li><a href="#">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About us</a></li>
-            <li><a href="">Products</a></li>
-            <li><a href="">Innovation</a></li>
+            <li class="navItem hasSubnav">
+                <a href="#">
+                    Products
+                    <i class="fa-solid fa-angle-down"></i>
+                </a>
+                <ul class="subnavList">
+                    <li><a href="product.html">UUR</a></li>
+                    <li><a href="javascript:void">AquaSee</a></li>
+                </ul>
+            </li>
+            <li class="navItem hasSubnav">
+                <a href="#">
+                    Innovation
+                    <i class="fa-solid fa-angle-down"></i>
+                </a>
+                <ul class="subnavList">
+                    <li><a href="innovation.html">Open Rov</a></li>
+                    <li><a href="javascript:void">AquaSee</a></li>
+                </ul>
+            </li>
             <li><a href="blog.html">Blog</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
     </div>
 
 
-    <section class="aboutus_container" data-aos="zoom-in" data-aos-duration="2000">
+    <section class="aboutus_container">
         <div class="container">
             <div class="head_wrapper" style="margin-bottom:  0;">
                 <div class="bg_button">
@@ -128,10 +166,12 @@
                 </div>
 
                 <div class="about_heading">
-                    <h1>Meet the Brains Behind Andromeida</h1>
+                    <h1>
+                        <span class="reveal-line">Meet the Brains Behind Andromeida</span>
+                    </h1>
                     <p>
-                        Empowering Ocean Innovation, Dive into Cutting-Edge <br>
-                        Underwater Robotics
+                        <span class="reveal-line">Empowering Ocean Innovation, Dive into Cutting-Edge</span><br>
+                        <span class="reveal-line">Underwater Robotics</span>
                     </p>
                 </div>
             </div>
@@ -145,7 +185,7 @@
             <div class="hero">
                 <div class="hero-wrapper">
                     <!-- Left Image -->
-                    <div class="hero-content" data-aos="fade-right" data-aos-duration="2000">
+                    <div class="hero-content hero_content_m" data-aos="fade-up" data-aos-duration="2000">
                         <div class="hero_inner_head  hero-width">
                             <span>
                                 New
@@ -244,7 +284,7 @@
 
     <section class="section_bg mx-width">
         <div class="container">
-            <div class="head_wrapper" data-aos="zoom-in" data-aos-duration="2000">
+            <div class="head_wrapper">
                 <div class="bg_button">
                     <button> Make in India Excellence</button>
                 </div>
@@ -266,7 +306,7 @@
                     <div class="excellence_img">
                         <img src="./assets/images/excellence_1.png" alt="Thrust Stand">
                     </div>
-                    <div class="excellence_details" data-aos="fade-left" data-aos-duration="2000">
+                    <div class="excellence_details" data-aos="fade-up" data-aos-duration="2000">
                         <h3>Thrust Stand</h3>
                         <p>
                             To optimize propulsion, we built a thrust measurement stand that evaluates each thruster’s
@@ -278,8 +318,8 @@
                         </p>
                     </div>
                 </div>
-                <div class="excellence_box">
-                    <div class="excellence_details" data-aos="fade-right" data-aos-duration="2000">
+                <div class="excellence_box mobile_advanced">
+                    <div class="excellence_details" data-aos="fade-up" data-aos-duration="2000">
                         <h3>Pressure Chamber</h3>
                         <p>
                             Underwater robots must endure high pressures; even a small leak can be
@@ -298,7 +338,7 @@
                     <div class="excellence_img">
                         <img src="./assets/images/excellence_1.png" alt="Electronics & Battery Testing">
                     </div>
-                    <div class="excellence_details" data-aos="fade-left" data-aos-duration="2000">
+                    <div class="excellence_details" data-aos="fade-up" data-aos-duration="2000">
                         <h3>Electronics & Battery Testing</h3>
                         <p>
                             Additionally, our labs include water-submersion testing pools and environmental test
@@ -413,7 +453,7 @@
     </section>
 
 
-    <section class="section_bg mx-width" data-aos="zoom-out" data-aos-duration="2000">
+    <section class="section_bg mx-width" data-aos="fade-up" data-aos-duration="2000">
         <div class="container">
             <div class="investor_details">
                 <p>If you are an investor or partner interested </p>
@@ -681,7 +721,7 @@
 
 
 
-    <section class="section_bg mx-width" data-aos="zoom-out" data-aos-duration="2000">
+    <section class="section_bg mx-width" data-aos="fade-up" data-aos-duration="2000">
         <div class="container">
             <div class="investor_details">
                 <p class="mb-4">Innovation Culture:</p>
@@ -853,6 +893,18 @@
         AOS.init({
             duration: 1500
         });
+    </script>
+
+    <script>
+        window.addEventListener("load", () => {
+            const lines = document.querySelectorAll(".reveal-line");
+            lines.forEach((line, index) => {
+                setTimeout(() => {
+                    line.classList.add("show");
+                }, index * 300); // stagger: 0.3s per line
+            });
+        });
+
     </script>
 
 

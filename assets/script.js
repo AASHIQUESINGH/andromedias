@@ -32,5 +32,10 @@ closeBtn.addEventListener("click", () => {
   mobileNav.classList.remove("active"); // close to left
 });
 
-
- 
+document.querySelectorAll(".hasSubnav > a").forEach((link) => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
+    const parent = link.parentElement;
+    parent.classList.toggle("active");
+  });
+});
