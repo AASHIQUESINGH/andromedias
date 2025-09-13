@@ -393,6 +393,10 @@
     font-size: 16px;
   }
 
+  .about_us p br{
+    display: none;
+  }
+
   .wh_heading h2 {
     font-size: 30px;
   }
