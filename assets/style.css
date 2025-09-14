@@ -588,7 +588,7 @@ nav {
 .offer_card {
   display: flex;
   gap: 25px;
-  align-items: center;
+  /* align-items: center; */
   justify-content: center;
 }
 
@@ -2348,6 +2348,7 @@ footer {
   height: 100%;
   width: 100%;
   object-fit: cover;
+  border-radius: 19.003px 19.003px 0 0;
 }
 
 .video_pool {
