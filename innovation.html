@@ -63,13 +63,14 @@
             opacity: 1;
             filter: blur(0);
         }
+        .about_heading h1{
+            font-size: 54px;
+        }
     </style>
 
 </head>
 
 <body>
-
-
 
     <nav>
         <div class="logo">
@@ -138,7 +139,7 @@
             </a>
         </div>
         <div class="humburger">
-            <i class="fa-solid fa-bars"></i>
+            <img src="./assets/images/humburger.svg" alt="">
         </div>
     </nav>
 
@@ -217,15 +218,12 @@
                                     Leveraging insights from the AUV project with NIOT and our own research, we plan to
                                     integrate advanced autonomy into UUR. This means outfitting the robot with onboard
                                     navigation intelligence, obstacle avoidance, and mission planning capabilities so it
-                                    can
-                                    execute surveys or search missions on its own. In the near future, an Andromeida AUV
-                                    will be deployed for coral reef mapping, habitat monitoring for underwater wildlife
-                                    and to govern reconnaissance and research grade operations to overcome possible
-                                    threats and security obstructions, all while the
-                                    operators
-                                    simply set the mission parameters and let it roam. This will unlock new
-                                    possibilities in
-                                    deep ocean exploration, where tethered operation is impractical.
+                                    can execute surveys or search missions on its own. In the near future, an Andromeida
+                                    AUV will be deployed for coral reef mapping, habitat monitoring for underwater
+                                    wildlife and to govern reconnaissance and research grade operations to overcome
+                                    possible threats and security obstructions, all while the operators simply set the
+                                    mission parameters and let it roam. This will unlock new possibilities in deep ocean
+                                    exploration, where tethered operation is impractical
                                 </p>
                             </div>
 
@@ -480,24 +478,6 @@
     <script>
         AOS.init();
     </script>
-
-    <!-- Add GSAP + ScrollTrigger CDN -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-
-    <script>
-        gsap.registerPlugin(ScrollTrigger);
-
-        ScrollTrigger.create({
-            trigger: ".auv_wheel",   // tumhara section
-            start: "top top",        // jaise hi section top pe aata hai
-            end: () => "+=" + document.querySelector("#scrollBox").scrollHeight,
-            pin: true,               // section ko pin kar do
-            scrub: true,             // smoothness ke liye
-            anticipatePin: 1
-        });
-    </script>
-
 
 
     <script>
