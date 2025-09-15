@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andromedia</title>
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="./assets/media.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- Add this in <head> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
+    <style>
+        .reveal-line {
+            display: inline-block;
+            overflow: hidden;
+            opacity: 0;
+            /* hidden initially */
+            transform: translateY(-30px);
+            /* start above */
+            filter: blur(8px);
+            /* blur effect */
+            transition: transform 0.8s ease, opacity 0.8s ease, filter 0.8s ease;
+        }
+
+        /* active class to animate */
+        .reveal-line.show {
+            transform: translateY(0);
+            /* move to original position */
+            opacity: 1;
+            filter: blur(0);
+        }
+
+        .ul_list {
+            padding-left: 25px;
+        }
+
+        .ul_list li {
+            color: #fff;
+        }
+
+        .about_us h2 {
+            font-size: 54px;
+        }
+
+        .video_div {
+            width: 100%;
+            height: 615px;
+        }
+
+        .aqua_list {
+            padding-left: 18px;
+        }
+
+        .aqua_list li {
+            color: #fff;
+        }
+
+        .about_us {
+            max-width: 1270px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">
+            <a href="index.html"><img src="./assets/images/logo.png" alt=""></a>
+        </div>
+        <div>
+            <ul class="nav_list">
+                <li><a href="about.html">About us</a></li>
+                <li><a href="javascript:void">Products <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="product.html">
+                                <div class="dropdown_ellipse">
+                                    <img src="./assets/images/Ellipse.png" alt="">
+                                </div>
+                                <img src="./assets/images/header_uur.jpg" alt="">
+                            </a>
+                            <p style="color: #fff;">UUR</p>
+                        </li>
+                        <li class="dropdown_line">
+                            <img src="./assets/images/dropdown_line.png" alt="">
+                        </li>
+                        <li>
+                            <a href="poolbuddy.html">
+                                <div class="dropdown_ellipse">
+                                    <img src="./assets/images/Ellipse.png" alt="">
+                                </div>
+                                <img src="./assets/images/header_pool.jpg" alt="">
+
+                            </a>
+                            <p>Pool Buddy<sup>TM</sup></p>
+                        </li>
+                        <li class="dropdown_line">
+                            <img src="./assets/images/dropdown_line.png" alt="">
+                        </li>
+                        <li>
+                            <a href="aquasee.html">
+                                <div class="dropdown_ellipse">
+                                    <img src="./assets/images/Ellipse.png" alt="">
+                                </div>
+                                <img src="./assets/images/aquasee_header.png" alt="">
+                            </a>
+                            <p>Aqua See</p>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="innovation.html">Innovation</a>
+                    <!-- <ul class="dropdown">
+                        <li><a href="innovation.html">
+                                <div class="dropdown_ellipse">
+                                    <img src="./assets/images/Ellipse.png" alt="">
+                                </div>
+                            </a>
+                            <p style="color: #fff;">Open Rov</p>
+                        </li>
+                        <li class="dropdown_line">
+                            <img src="./assets/images/dropdown_line.png" alt="">
+                        </li>
+                        <li>
+                            <a href="">
+                                <div class="dropdown_ellipse">
+                                    <img src="./assets/images/Ellipse.png" alt="">
+                                </div>
+                            </a>
+                            <p style="color: #fff;">AquaSee</p>
+
+                        </li>
+                    </ul> -->
+                </li>
+                <li><a href="PartnerWithUs.html">Partner With Us</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </div>
+        <div class="nav-btn mobile_btn">
+            <a href="contact.html">
+                <button>
+                    Let's Talk <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </a>
+        </div>
+        <div class="humburger">
+            <img src="./assets/images/humburger.svg" alt="">
+        </div>
+    </nav>
+
+    <div class="mobile_nav">
+        <div class="close_btn">
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About us</a></li>
+            <li class="navItem hasSubnav">
+                <a href="#">
+                    Products
+                    <i class="fa-solid fa-angle-down"></i>
+                </a>
+                <ul class="subnavList">
+                    <li><a href="product.html">UUR</a></li>
+                    <li><a href="poolbuddy.html">Pool Buddy<sup>TM</sup></a></li>
+                </ul>
+            </li>
+            <li class="navItem">
+                <a href="innovation.html">
+                    Innovation
+                </a>
+            </li>
+            <li><a href="PartnerWithUs.html">Partner With Us</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+
+
+    <section class="about_section">
+        <div class="container">
+            <div class="head_wrapper">
+                <div class="bg_button">
+                    <button>Our Products</button>
+                </div>
+
+                <div class="about_us">
+                    <h2><span class="reveal-line"> AquaSee™ <br>
+                            Underwater Image Enhancement & Analytics</span></h2>
+                    <p>
+                        <span class="reveal-line">
+                            Pool Buddy is a patented robotic system (granted in 2024) designed to automate swimming pool
+                            maintenance. Developed as part of Andromeida’s journey in underwater robotics, Pool Buddy
+                            reflects our expertise in creating reliable, intelligent robots for real-world water
+                            environments. While the cleaning stack remains a work-in-progress, the true innovation lies
+                            in its automated water chemistry optimization system, making it a first-of-its-kind solution
+                            in India.
+                        </span>
+                    </p>
+                </div>
+            </div>
+            <div class="about_img mx-width">
+                <div class="innovation_stoke" style="left: 22%;top: -30%;">
+                    <img src="./assets/images/innovation_stroke.png" alt="innovation stroke">
+                </div>
+                <div class="video_div">
+                    <video controls autoplay muted loop>
+                        <source src="./assets/images/AquaSee_Output.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="section_bg">
+        <div class="container">
+            <div class="head_wrapper" data-aos="fade-up" data-aos-duration="2000">
+                <div class="bg_button">
+                    <button>AquaSee™</button>
+                </div>
+
+                <div class="wh_heading">
+                    <h2>Turn murky footage into mission-ready <br> insight.</h2>
+                    <p>
+                        AquaSee is Andromeida’s AI-based underwater image enhancement pipeline that captures and <br>
+                        analyzes ocean data to mitigate adverse ecological impacts.
+                    </p>
+                </div>
+            </div>
+            <div class="partnership_wrapper">
+                <div class="partnership_details">
+                    <h5>What it is</h5>
+                    <p>
+                        A copyrighted software stack built for underwater RGB correction and analytics, delivered
+                        through a dedicated digital dashboard for image/video processing and AI-governed insights.
+                    </p>
+                    <div class="product_circle_img">
+                        <img src="./assets/images/circle_img.png" alt="">
+                    </div>
+                </div>
+                <div class="partnership_details">
+                    <h5>Why it matters</h5>
+                    <p>
+                        Coastal economies and aquaculture depend on clear, actionable visuals below the surface;
+                        over-fishing and unregulated practices degrade stock quality and monitoring. AquaSee clarifies
+                        scenes and supports stakeholders with evidence-driven decisions for conservation and
+                        productivity.
+                    </p>
+                    <div class="product_circle_img">
+                        <img src="./assets/images/circle_img.png" alt="">
+                    </div>
+                </div>
+                <div class="partnership_details">
+                    <h5>What it does</h5>
+                    <p>
+                    <ul class="aqua_list">
+                        <li>
+                            Enhances underwater RGB for truer color rendition and better visibility in low-contrast,
+                            hazy scenes. 
+                        </li>
+                        <li>
+                            Analyzes imagery via a dashboard that streamlines review, comparison, and reporting for
+                            teams. 
+                        </li>
+                        <li>
+                            Supports research workflows where high-quality visuals accelerate mapping, monitoring, and
+                            documentation.
+                        </li>
+                    </ul>
+                    </p>
+                    <div class="product_circle_img">
+                        <img src="./assets/images/circle_img.png" alt="">
+                    </div>
+                </div>
+                <div class="partnership_details">
+                    <h5>Who it’s for</h5>
+                    <p>
+                    <ul class="aqua_list">
+                        <li>Academic researchers seeking clearer transects, habitat mapping, and long-term baselines. 
+                        </li>
+                        <li>Ocean science & aquaculture teams monitoring stock health and infrastructure conditions. 
+                        </li>
+                        <li>Inspection & conservation groups documenting dams, hulls, pipelines, reefs, and sensitive
+                            sites.</li>
+                    </ul>
+                    </p>
+                    <!-- <div class="product_circle_img">
+                        <img src="./assets/images/circle_img.png" alt="">
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section class="section_bg mx-width">
+        <div class="container">
+            <div class="excellence_innovation">
+                <div class="excellence_box">
+                    <div class="excellence_img">
+                        <img src="./assets/images/seamless_pool.png" alt="Thrust Stand">
+                    </div>
+                    <div class="excellence_details" data-aos="fade-up" data-aos-duration="2000">
+                        <h3>Seamless with Andromeida hardware</h3>
+                        <p>
+                            AquaSee complements our robotics portfolio—use it to get more from UUR’s research footage
+                            and Pool Buddy’s inspection visuals, creating an end-to-end capture→enhance→analyze loop
+                            under one roof.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="section_bg mx-width" data-aos="fade-up" data-aos-duration="2000">
+        <div class="container">
+            <div class="investor_details">
+                <p class="mb-3">Key capabilities: </p>
+
+                <ul class="ul_list">
+                    <li class="mb-1">
+                        Dashboard-first experience: Upload, enhance, compare, and export in a few clicks. 
+                    </li>
+                    <li class="mb-1">
+                        Quality-aware processing: Color/contrast recovery tailored for underwater scenes. 
+                    </li>
+                    <li>
+                        Actionable outputs: Sharper imagery that supports downstream analysis and mitigation planning.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+    <section class="bg_section_explore">
+        <div class="container">
+            <div class="comming_wrapper">
+                <div class="comming_soon_img">
+                    <img src="./assets/images/andromedia_comming_soon.png" alt="comming soon">
+                </div>
+                <div class="commings_details">
+                    <h2>Book your complimentary training session on RoS now !</h2>
+                    <p>Start building your customized robots now.</p>
+                    <div class="nav-btn">
+                        <a href="contact.html">
+                            <button>
+                                Explore Now <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="who_we_are">
+        <div class="container">
+            <div class="head_wrapper">
+                <div class="bg_button">
+                    <button>FAQ’s</button>
+                </div>
+
+                <div class="wh_heading">
+                    <h2>Frequently asked questions</h2>
+                    <p>
+                        Got questions? Here are our most frequently asked questions
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq-container">
+                <div class="faq-item  active">
+                    <button class="faq-question">
+                        How easy is it to operate UUR™ for a first-time user ? <span class="icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>
+                            For a first-time user with a technical background like yours, operating UUR™ would be
+                            straightforward. The interface is designed to be user-friendly, with guided workflows and
+                            setup wizards that simplify installation and calibration. However, some familiarity with
+                            sensors, hardware connections, or data interfaces will definitely help speed up the learning
+                            process. First-time users without a technical background may require more initial training
+                            but can still operate it after going through tutorials.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        What is the difference between the Academic Edition and Quest Edition ? <span
+                            class="icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>
+                            The Academic Edition is optimized for educational purposes. It includes simulation tools,
+                            learning modules, and limited hardware interfacing options to help students and researchers
+                            experiment without requiring full-scale deployment.
+                            <br>
+                            The Quest Edition, on the other hand, is intended for field operations, real-time data
+                            acquisition, and industrial use cases. It supports a wider range of sensors, higher data
+                            throughput, and customization options. Based on your work in projects like vehicle tuning
+                            and diagnostics, the Quest Edition would likely suit hands-on applications where hardware
+                            integration and precise measurements are critical.
+
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Can I customize UUR™ with my own sensors or tools ? <span class="icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes, customization is one of UUR™’s key strengths. It supports integration with external
+                            sensors, diagnostic tools, and interfaces, much like how you are preparing to work with the
+                            Vgate vLinker MC+ for your Street Triple 675. Custom configurations require proper
+                            communication protocols (e.g., CAN, UART, or Bluetooth) and calibration parameters. Users
+                            with engineering experience can extend its capabilities or adapt it for specialized use
+                            cases like automotive tuning or environmental monitoring.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        What environments and depths can UUR™ operate in safely ? <span class="icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>
+                            The operational limits depend on the specific configuration. Typically, the Quest Edition is
+                            built for industrial environments with protection against dust, vibration, and temperature
+                            fluctuations. If it’s used in automotive or outdoor applications, it can withstand depths up
+                            to a few meters underwater and temperature ranges from –20°C to +60°C, similar to rugged
+                            sensors in vehicle diagnostics. You would need to follow safety guidelines to ensure sensor
+                            waterproofing and proper enclosure.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        What kind of training or preparation is required to start using UUR™ ? <span
+                            class="icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>
+                            A basic technical orientation covering system setup, sensor calibration, and data
+                            interpretation is required. For someone like you—familiar with vehicle systems, diagnostic
+                            tools, and hardware—training would mostly focus on interface workflows and safety protocols.
+                            For other users, the platform offers structured tutorials, troubleshooting guides, and
+                            hands-on workshops to build confidence before full deployment.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        ⁠How durable is UUR™ in harsh underwater conditions ? <span class="icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>
+                            UUR™ is designed with ruggedized components to operate in challenging underwater
+                            environments. Its housing is typically rated IP68 or higher, ensuring protection against
+                            prolonged submersion, corrosion, and pressure. It can handle saltwater exposure, shock, and
+                            vibration—conditions similar to those encountered in offshore or automotive testing setups.
+                            However, proper sealing and periodic maintenance are necessary to ensure continued
+                            performance in highly abrasive or chemically reactive environments.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        What is the maximum mission duration or battery life of UUR™ ? <span class="icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>
+                            The battery life depends on the sensor load and operational mode. Under standard conditions,
+                            UUR™ can operate continuously for 8–12 hours, with power-saving modes extending this to
+                            18–20 hours in low-activity scenarios. For longer missions, external power sources or
+                            hot-swappable battery packs are supported. This flexibility allows users like you, who are
+                            used to extended testing scenarios (for example, long diagnostic runs), to adapt the system
+                            to mission requirements without compromising reliability.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        How quickly can UUR™ be deployed for a mission ? <span class="icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>
+                            Deployment is designed to be efficient, especially for field engineers. With pre-configured
+                            mission profiles and automated calibration routines, a trained user can deploy UUR™ within
+                            10–20 minutes. This includes powering up, sensor alignment, and system checks. For rapid
+                            response scenarios, Andromeida also offers quick-start guides and remote support tools that
+                            further reduce setup time.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        What support and maintenance services does Andromeida provide? <span class="icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Andromeida offers comprehensive support tailored to technical users like you:</p>
+                        <ul>
+                            <li>
+                                Remote diagnostics and troubleshooting assistance
+                            </li>
+                            <li>
+                                Firmware updates for performance optimization
+                            </li>
+                            <li>
+                                Hardware maintenance kits and spares for field repairs
+                            </li>
+                            <li>
+                                Training modules and user manuals to ensure correct operation
+                            </li>
+                            <li>
+                                On-demand support for mission-critical applications, including advice on sensor
+                                integration and calibration
+                                Warranty and extended service plans are also available to ensure uninterrupted usage in
+                                demanding conditions.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Can multiple UUR™ units be operated together for larger missions ? <span class="icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>
+                            Yes, UUR™ supports synchronized operation across multiple units. Through wireless or wired
+                            networks, data can be aggregated in real time, enabling coordinated mapping, sensor fusion,
+                            and redundancy. This makes it ideal for larger operations such as environmental monitoring,
+                            fleet diagnostics, or complex testing setups. Users with experience in multi-sensor
+                            systems—like yourself working on advanced vehicle tuning or diagnostics—can configure and
+                            control these units to scale operations efficiently.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="who_we_are">
+        <div class="container">
+            <div class="newsletter_div">
+                <img src="./assets/images/newsletter.png" alt="newsletter">
+                <div class="newsletter_details">
+                    <h2>Let’s design one for you ?! <br>
+                        Get in touch to discuss your next game-changing UUR
+                        .</h2>
+                    <div class="nav-btn">
+                        <a href="contact.html">
+                            <button style="padding: 0 10px; width: 35%;" class="mobile_btn_w">
+                                Schedule a Demo <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="">
+            <div class="footer_wrapper">
+                <div class="footer_logo">
+                    <img src="./assets/images/footer_logo.png" alt="">
+                    <p>© ANDROMEIDA 2024 All rights reserved</p>
+                    <div class="newsletter">
+                        <p>Join our newsletter</p>
+                        <div class="news_box">
+                            <input type="text" placeholder="info@andromeida.com">
+                            <div class="nav-btn">
+                                <a href="contact.html">
+                                    <button>
+                                        Sign Up <i class="fa-solid fa-arrow-right"></i>
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="footer_circle">
+                    <img src="./assets/images/footer.png" alt="">
+                </div> -->
+                <div>
+                    <ul class="social_icon">
+                        <li><a href=" "></a>
+                            <img src="./assets/images/twitter.png" alt="">
+                        </li>
+                        <li><a href=" ">
+                                <img src="./assets/images/instagram.png" alt="">
+                            </a></li>
+                        <li><a href=" ">
+                                <img src="./assets/images/youtube.png" alt="">
+                            </a></li>
+                        <li><a href="">
+                                <img src="./assets/images/linkedln.png" alt="">
+                            </a></li>
+                    </ul>
+                    <ul class="footer_link">
+                        <li><a href="">Science</a></li>
+                        <li><a href="innovation.html">Innovation</a></li>
+                        <li><a href="product.html">Products</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li>
+                            <a href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+        integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script src="./assets/script.js">
+
+    </script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+
+    <script>
+        window.addEventListener("load", () => {
+            const lines = document.querySelectorAll(".reveal-line");
+            lines.forEach((line, index) => {
+                setTimeout(() => {
+                    line.classList.add("show");
+                }, index * 300); // stagger: 0.3s per line
+            });
+        });
+
+    </script>
+
+
+    <script>
+        if (window.innerWidth < 768) {
+            document.querySelectorAll('.col_solution[data-aos]').forEach(el => {
+                el.removeAttribute('data-aos');
+                el.removeAttribute('data-aos-duration'); // optional: remove duration too
+            });
+        }
+
+        AOS.init({
+            duration: 1500
+        });
+    </script>
+</body>
+
+</html>

@@ -124,6 +124,7 @@ nav {
   transform: translateX(-50%);
   text-align: center;
   object-fit: cover;
+  border-radius: 24px;
 }
 
 .dropdown li p {
@@ -136,7 +137,7 @@ nav {
 .nav_list li:hover > .dropdown {
   padding: 10px 0;
   height: 192px;
-  width: 350px;
+  width: 540px;
   pointer-events: auto;
   position: absolute;
   top: 100%;

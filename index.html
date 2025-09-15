@@ -58,6 +58,13 @@
         .video_div {
             width: 565px;
             height: 447px;
+            position: relative;
+        }
+
+        .video_div img {
+            position: absolute;
+            bottom: 0;
+            height: 173px;
         }
     </style>
 
@@ -66,6 +73,7 @@
 <body>
 
     <div class="main-section">
+        
         <nav>
             <div class="logo">
                 <a href="index.html"><img src="./assets/images/logo.png" alt=""></a>
@@ -79,7 +87,7 @@
                                     <div class="dropdown_ellipse">
                                         <img src="./assets/images/Ellipse.png" alt="">
                                     </div>
-                                    <img src="./assets/images/uur_image.png" alt="">
+                                    <img src="./assets/images/header_uur.jpg" alt="">
                                 </a>
                                 <p style="color: #fff;">UUR</p>
                             </li>
@@ -91,10 +99,22 @@
                                     <div class="dropdown_ellipse">
                                         <img src="./assets/images/Ellipse.png" alt="">
                                     </div>
-                                    <img src="./assets/images/Aquasee.png" alt="">
+                                    <img src="./assets/images/header_pool.jpg" alt="">
 
                                 </a>
                                 <p>Pool Buddy<sup>TM</sup></p>
+                            </li>
+                            <li class="dropdown_line">
+                                <img src="./assets/images/dropdown_line.png" alt="">
+                            </li>
+                             <li>
+                                <a href="aquasee.html">
+                                    <div class="dropdown_ellipse">
+                                        <img src="./assets/images/Ellipse.png" alt="">
+                                    </div>
+                                    <img src="./assets/images/aquasee_header.png" alt="">
+                                </a>
+                                <p>Aqua See</p>
                             </li>
                         </ul>
                     </li>
@@ -327,8 +347,9 @@
                     </div>
                     <div class="video_div">
                         <video controls autoplay muted loop>
-                            <source src="./assets/images/vedio_pool.mp4" type="video/mp4">
+                            <source src="./assets/images/UUR_Training_Video.mp4" type="video/mp4">
                         </video>
+                        <img src="./assets/images/homepage_layer.png" alt="">
                     </div>
                     <div class="offer_details">
                         <h3>Meet UUR™(RoV) </h3>
@@ -353,6 +374,7 @@
                         <video controls autoplay muted loop>
                             <source src="./assets/images/vedio_pool.mp4" type="video/mp4">
                         </video>
+                        <img src="./assets/images/homepage_layer.png" alt="">
                     </div>
                     <div class="offer_details">
                         <h3>Pool Buddy™</h3>
